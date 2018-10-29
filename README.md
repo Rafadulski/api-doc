@@ -822,3 +822,16 @@ $content = curl_exec($ch);
 echo ($content); 
 ```
 
+### Exemplo resposta PHP
+
+```
+<?php
+// Retorno do arquivo Base64
+$doc = "JVBERi0xLjcKJeLjz9MKNyAwIG9iago8PCAvVHlwZSAvUGFnZSAvUGFyZ...";
+
+// Salva o arquivo no local especificado
+$fp = fopen('livro_caixa.pdf', 'w');
+fwrite($fp, base64_decode($doc));
+fclose($fp);
+```
+
