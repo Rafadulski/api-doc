@@ -7,7 +7,8 @@
 
 # API
 
-- [Criar usuários](#criar-usuários)
+- [Criar usuário](#criar-usuário)
+- [Alterar usuário](#alterar-usuário)
 - [Obter dados do usuário](#obter-dados-do-usuário)
 - [Criar dependentes](#criar-dependentes)
 - [Criar contatos](#criar-contatos)
@@ -46,7 +47,7 @@ Afim de garantir a integridade dos dados o processo de integração, deve seguir
 5. Processamento
 
 
-## Criar usuários
+## Criar usuário
 
 ### Requisição
 
@@ -71,6 +72,7 @@ Afim de garantir a integridade dos dados o processo de integração, deve seguir
 | u_state            |  string |      S      | Estado                    |
 | u_city             |  string |      S      | Cidade                    |
 | u_district         |  string |      N      | Bairro                    |
+| expiration_date    |  string |      N      | Data de expiração         |
 
 ### Corpo
 
@@ -86,7 +88,8 @@ Afim de garantir a integridade dos dados o processo de integração, deve seguir
       "u_address": "Rua das Aves",
       "u_number": "5130",
       "u_state": "SC",
-      "u_city": "Joinville"
+      "u_city": "Joinville",
+      "expiration_date": "2018-02-28"
    },
    "token":{  
       "value": ""
@@ -140,6 +143,34 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
 
 $content = curl_exec($ch);
 echo($content);
+```
+
+## Alterar usuário
+
+### Requisição
+
+`PUT /user/change`
+
+### Parâmetros do corpo
+
+| Campo 	    | Tipo     | Descrição         |
+|-------------------|:--------:|:------------------|
+| expiration_date   | string   | Data de expiração |
+
+### Corpo
+
+```
+{  
+   "cpf_titular": {  
+      "value": "999.999.999-99"
+   },
+   "token": {  
+      "value": ""
+   },
+   "expiration_date": {
+      "value": ""
+   }   
+}
 ```
 
 ## Obter dados do usuário
