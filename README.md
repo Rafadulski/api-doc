@@ -173,6 +173,24 @@ echo($content);
 }
 ```
 
+### Resposta
+
+```
+{
+   "status": "OK",
+   "error_code": 0,
+   "error_desc": null
+}
+```
+
+### Status da Resposta
+
+| status 	    | error_code | error_desc         |
+|-------------------|:----------:|:-------------------|
+| OK                | 0          | null               |
+| ERROR             | 18         | Error Invalid date |
+
+
 ## Obter dados do usuário
 
 ### Requisição
