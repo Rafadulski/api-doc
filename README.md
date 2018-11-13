@@ -321,6 +321,14 @@ echo ($content);
 }
 ```
 
+### Status da Resposta
+
+| status 	    | error_code | error_desc         |
+|-------------------|:----------:|:-------------------|
+| OK                | 0          | null               |
+| ERROR             | 405        | Prazo expirado     |
+
+
 ### Exemplo chamada PHP
 
 ```
@@ -426,11 +434,16 @@ echo ($content);
 }
 ```
 
+### Status da Resposta
+
+| status 	    | error_code | error_desc         |
+|-------------------|:----------:|:-------------------|
+| OK                | 0          | null               |
+| ERROR             | 405        | Prazo expirado     |
+
 ### Exemplo chamada PHP
 
 ```
-	
-
 <?php
 
 header('Content-Type: application/json');
@@ -524,6 +537,13 @@ echo ($content);
    "error_desc": null
 }
 ```
+
+### Status da Resposta
+
+| status 	    | error_code | error_desc         |
+|-------------------|:----------:|:-------------------|
+| OK                | 0          | null               |
+| ERROR             | 405        | Prazo expirado     |
 
 ### Exemplo chamada PHP
 
@@ -647,6 +667,13 @@ echo ($content);
 | error_code            | string | Código do erro                |
 | error_desc            | string | Descrição do erro             |
 
+### Status da Resposta
+
+| status 	    | error_code | error_desc         |
+|-------------------|:----------:|:-------------------|
+| OK                | 0          | null               |
+| ERROR             | 405        | Prazo expirado     |
+
 ### Exemplo chamada PHP
 
 ```
@@ -733,6 +760,13 @@ echo ($content);
    "cpf_titular": "359.177.770-63"
 }
 ```
+
+### Status da Resposta
+
+| status 	    | error_code | error_desc         |
+|-------------------|:----------:|:-------------------|
+| OK                | 0          | null               |
+| ERROR             | 405        | Prazo expirado     |
 
 ### Exemplo chamada PHP
 
@@ -829,6 +863,13 @@ echo ($content);
 | status                | string | Status do processamento       |
 | error_code            | string | Código do erro                |
 | error_desc            | string | Descrição do erro             |
+
+### Status da Resposta
+
+| status 	    | error_code | error_desc         |
+|-------------------|:----------:|:-------------------|
+| OK                | 0          | null               |
+| ERROR             | 405        | Prazo expirado     |
 
 ### Exemplo chamada PHP
 
